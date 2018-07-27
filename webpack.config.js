@@ -113,7 +113,31 @@ const config = {
     new HtmlWebpackPlugin({
       template: './src/test.html',
       filename: './test.html'
-    })    
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/sidebar.html',
+      filename: './sidebar.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/shadow.html',
+      filename: './shadow.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/megamenu.html',
+      filename: './megamenu.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/buynow.html',
+      filename: './buynow.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/cancel.html',
+      filename: './cancel.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/addtocart.html',
+      filename: './addtocart.html'
+    })   
   ],
   optimization: isProduction ? {
     minimizer: [

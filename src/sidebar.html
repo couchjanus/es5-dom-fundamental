@@ -6,6 +6,7 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello cart</title>
     <script defer src="fontawesome/js/fontawesome-all.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
 
     <style>
          
@@ -18,17 +19,17 @@
               <i class="fa fa-bars" aria-hidden="true"></i>
       </label>
       <input type="checkbox" id="menu-trigger" /> 
-  <div class="row">    		            
-      <ul id="nav" class="nav">
-          <li class="current"><a href="index.html">Home</a></li>
-          <li class="has-children"><a href="products.html">Catalog</a></li>
-          <li><a href="about.html">About</a></li>	
-          <li class="has-children"><a href="blog.html">Blog</a></li>	
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="#" id="cart-trigger"><i class="fas fa-shopping-cart"></i>&nbsp;Cart</a></li>
-      </ul> <!-- end nav -->			   	 
-  </div> 
-</nav> <!-- end nav-wrap --> 
+      <div class="row">    		            
+          <ul id="nav" class="nav mainmenu">
+              <li class="current"><a href="index.html">Home</a></li>
+              <li class="has-children"><a href="products.html">Catalog</a></li>
+              <li><a href="about.html">About</a></li>	
+              <li class="has-children"><a href="blog.html">Blog</a></li>	
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#" id="cart-trigger"><i class="fas fa-shopping-cart"></i>&nbsp;Cart</a></li>
+          </ul> <!-- end nav -->			   	 
+      </div> 
+    </nav> <!-- end nav-wrap --> 	 
 <section class="wrapper container special" id="featured">
     <h1>Hello, Cart!</h1>        
         
@@ -195,19 +196,60 @@
       </article>
     
     </div>            
-               
-  </section>	             
-    
-  <script>
-      document.addEventListener("DOMContentLoaded", ready);
-       function ready() {
-           document.getElementById("cart-trigger").addEventListener('click', function () {
-             console.log("It's Cart Trogger");
-           });
-       }
-  </script>
+  </section>
+    <!-- Footer Area Start -->
+    <footer id="footer">
+    </footer>
+    <!-- Footer Area Stop -->
 
-  
-    <!-- <script src="/js/main.js"></script> -->
+    <!-- Aside Area Start -->
+    <aside id="cart-sidebar" class="cart">
+        <a href="" class="remove"><i class="fas fa-times fa-2x"></i></a>
+        
+        <h2>Cart</h2>
+        <!-- cart-items start-->
+        <ul class="cart-items">
+            <li>
+                <span class="item-quantity">1x</span> <span class="item-name">Product Name</span>
+                <div class="item-price">$9.99</div>
+                <a href="#0" class="item-remove"></a>
+            </li>
+        </ul> 
+        <!-- cart-items end -->
+    
+        <div class="cart-total">
+            <p>Total <span>$39.96</span></p>
+        </div> <!-- cart-total -->
+    
+        <a href="#" class="checkout-button">Checkout</a>
+    </aside> <!-- cart end -->
+    <!-- Aside Area end -->             
+    
+    <script>
+
+      document.addEventListener("DOMContentLoaded", ready);
+
+        function ready() {
+            document.getElementById("cart-trigger").addEventListener('click', function () {
+                document.getElementById("cart-sidebar").classList.add('show-sidebar');
+                }
+            );
+            
+            document.querySelector("#cart-sidebar .remove").addEventListener('click', function () {
+                document.getElementById("cart-sidebar").classList.remove('show-sidebar');
+                }
+            );
+
+          var hamburgerToggle = document.querySelector('#menu-trigger');
+    
+          hamburgerToggle.addEventListener('click', function(e){
+              e.preventDefault();
+              document.querySelector('.mainmenu').classList.toggle('active');
+          });
+            
+        }
+
+      
+      </script>
   </body>
 </html>

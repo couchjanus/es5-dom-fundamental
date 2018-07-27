@@ -5,7 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello cart</title>
-    <script defer src="fontawesome/js/fontawesome-all.js"></script>
+    <script defer src="/fontawesome/js/fontawesome-all.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
 
     <style>
          
@@ -18,18 +19,19 @@
               <i class="fa fa-bars" aria-hidden="true"></i>
       </label>
       <input type="checkbox" id="menu-trigger" /> 
-  <div class="row">    		            
-      <ul id="nav" class="nav">
-          <li class="current"><a href="index.html">Home</a></li>
-          <li class="has-children"><a href="products.html">Catalog</a></li>
-          <li><a href="about.html">About</a></li>	
-          <li class="has-children"><a href="blog.html">Blog</a></li>	
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="#" id="cart-trigger"><i class="fas fa-shopping-cart"></i>&nbsp;Cart</a></li>
-      </ul> <!-- end nav -->			   	 
-  </div> 
-</nav> <!-- end nav-wrap --> 
+      <div class="row">    		            
+          <ul id="nav" class="nav mainmenu">
+              <li class="current"><a href="index.html">Home</a></li>
+              <li class="has-children" id="catalog"><a href="#">Catalog</a></li>
+              <li><a href="about.html">About</a></li>	
+              <li class="has-children"><a href="blog.html">Blog</a></li>	
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#" id="cart-trigger"><i class="fas fa-shopping-cart"></i>&nbsp;Cart</a></li>
+          </ul> <!-- end nav -->			   	 
+      </div> 
+    </nav> <!-- end nav-wrap --> 	 
 <section class="wrapper container special" id="featured">
+   
     <h1>Hello, Cart!</h1>        
         
     <div class="grid-layout">
@@ -195,19 +197,115 @@
       </article>
     
     </div>            
-               
-  </section>	             
+    </section>
+    <!-- Footer Area Start -->
+    <footer id="footer">
+    </footer>
+    <!-- Footer Area Stop -->
+    <div id="shadow-layer" class="shadow-layer"></div>
+    <!-- Aside Area Start -->
+    <aside id="cart-sidebar" class="cart">
+        <a href="" class="remove"><i class="fas fa-times fa-2x"></i></a>
+        
+        <h2>Cart</h2>
+        <!-- cart-items start-->
+        <ul class="cart-items">
+            <li>
+                <span class="item-quantity">1x</span> <span class="item-name">Product Name</span>
+                <div class="item-price">$9.99</div>
+                <a href="#0" class="item-remove"></a>
+            </li>
+        </ul> 
+        <!-- cart-items end -->
     
-  <script>
-      document.addEventListener("DOMContentLoaded", ready);
-       function ready() {
-           document.getElementById("cart-trigger").addEventListener('click', function () {
-             console.log("It's Cart Trogger");
-           });
-       }
-  </script>
+        <div class="cart-total">
+            <p>Total <span>$39.96</span></p>
+        </div> <!-- cart-total -->
+    
+        <a href="#" class="checkout-button">Checkout</a>
+    </aside> <!-- cart end -->
+    <!-- Aside Area end -->
 
-  
-    <!-- <script src="/js/main.js"></script> -->
+
+    <div class="mega-menu">
+        <div class="mega-menu-top">
+            <div class="mega-search">
+                <label for="mega-search">Search</label>
+                <input type="search" id="mega-search" placeholder="Search" />
+            </div>
+            <div class="close">
+                <span>&#10006;</span> 
+            </div>
+        </div>
+        <h3>Catalog</h3>
+        <ul class="nav themes">
+            <li><a href="#"> Mice</a></li>
+            <li><a href="#"> Cats</a></li>
+            <li><a href="#"> Dogs</a></li>
+            <li><a href="#"> Rabbits</a></li>
+            <li><a href="#"> Crocodiles</a></li>
+            <li><a href="#"> Chicks</a></li>
+            <li><a href="#"> Dinosaurs</a></li>
+            <li><a href="#"> Skunks</a></li>
+            <li><a href="#"> Rats</a></li>
+            <li><a href="#"> Crows</a></li>
+        </ul>
+        <footer>
+            <div class="logo-footer">  
+              <img src="images/logo.png">
+            </div>
+            <ul class="nav footer">
+                <li>Contact Us</li>
+                <li>About Us</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </footer>
+    </div>
+    
+    <script>
+      
+        function toggle_panel(panel, background_layer) {
+                if (panel.classList.contains('show-sidebar')) {
+                    panel.classList.remove('show-sidebar');
+                    background_layer.classList.remove('is-visible');
+                } else {
+                    panel.classList.add('show-sidebar');
+                    background_layer.classList.add('is-visible');
+                }
+        }
+
+
+        function ready() {
+            
+            document.getElementById("cart-trigger").addEventListener('click', function () {
+                toggle_panel(document.getElementById("cart-sidebar"), document.getElementById("shadow-layer"));
+            });
+
+            document.querySelector("#cart-sidebar .remove").addEventListener('click', function () {
+                toggle_panel(document.getElementById("cart-sidebar"), document.getElementById("shadow-layer"));
+                }
+            );
+
+            var hamburgerToggle = document.querySelector('#menu-trigger');
+    
+            hamburgerToggle.addEventListener('click', function(e){
+                e.preventDefault();
+                document.querySelector('.mainmenu').classList.toggle('active');
+            });
+
+            let mega = document.querySelector('.mega-menu');
+
+            catalog.addEventListener('click', function () {
+                mega.classList.toggle('mega-active');
+            });
+            
+            document.querySelector('.mega-menu .close').addEventListener('click', function () {
+                mega.classList.remove('mega-active');
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", ready);
+
+      </script>
   </body>
 </html>
