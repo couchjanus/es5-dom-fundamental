@@ -7,7 +7,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <style>
-         
+         .red_border{
+            color: aquamarine;
+            background-color: black;
+            border: crimson solid 2px;
+        }
+
         </style>
     </head>
     <body>
@@ -29,433 +34,53 @@
       <hr>
 
     <section class="wrapper container special">
-       
-    <article class="page">
-      <h2 id="obj1">JavaScript Object</h2>
-      <!-- start javascript -->
-      <script>
-        
-        var o1 = new Object();
-        var o2 = {}; // пустые фигурные скобки
-
-        var myCar = new Object(); // var myCar = {}; // пока пустой
-
-        myCar.make = "Ford";
-        myCar.model = "Mustang";
-        myCar.year = 2999;
-        console.log(myCar);
-
-        myCar["make"] = "Ford";
-        myCar["model"] = "Mustang";
-        myCar["make-year"] = 1999;
-        console.log(myCar);
-
-        
-        // Можно получить доступ к свойствам, используя значение строки, которое хранится в переменной:
-
-        // var propertyName = "make";
-        // myCar[propertyName] = "Ford";
-        
-        // propertyName = "model";
-        // myCar[propertyName] = "Mustang";
-
-        // console.log(myCar);
-
-        function showProps(obj, objName) {
-          var result = "";
-          for (var i in obj) {
-            if (obj.hasOwnProperty(i)) {
-                result += objName + "." + i + " = " + obj[i] + "\n";
-            }
-          }
-          return result;
-        }
-        // showProps(myCar, "myCar");
-
-        function listAllProperties(o){     
-            var objectToInspect;     
-            var result = [];
-            for(objectToInspect = o; objectToInspect !== null; objectToInspect = Object.getPrototypeOf(objectToInspect)){  
-                result = result.concat(Object.getOwnPropertyNames(objectToInspect));  
-            }
-            return result;
-        }
-      // Это может быть полезно для обнаружения скрытых (hidden) свойств (свойства в цепочке прототипа, которые недоступны через объект, в случае, если другое свойство имеет такое же имя в предыдущем звене из цепочки прототипа). Перечислить доступные свойства можно, если удалить дубликаты из массива.
-
-      function Car(make, model, year) {
-        this.make = make;
-        this.model = model;
-        this.year = year;
-      }
-
-      // var mycar = new Car("Eagle", "Talon TSi", 1993);
-
-      // var kenscar = new Car("Nissan", "300ZX", 1992);
-      // var vpgscar = new Car("Mazda", "Miata", 1990);
-      
-      </script>
-    </article>    
-    <article class="page">
-      <h2 id="inner">Свойство innerHTML</h2>
-
-      <div id='chat'></div>
-
-      <div id="my"></div>
-
-      <script>
-          // console.log(document.body.innerHTML);
-          // console.log(document.body['innerHTML']);
-          
-          // document.body.innerHTML += '<b>незакрытый тег'; // незакрытый тег
-          // console.log(document.body.innerHTML ); // <b>тест</b> (исправлено)
-
-          // chat.innerHTML += "<div>Hi <img src='images/cat3.jpg'/> !</div>";
-          // chat.innerHTML += "Как дела?";
-
-          // var elem = document.getElementById('my');
-          // elem.innerHTML = '<h2>Вставленный скрипт не выполнится</h2><script>console.log("Вставленный скрипт не выполнится");</scr' + 'ipt>';
-
-      </script>
-    </article>
     
-    <article class="page">
-      <h2 id="outer1">Свойство outerHTML</h2>
-
-      <div id="hello">Привет <b>Мир</b></div>
-
-      <!-- start javascript -->
-      <script>
-        // Пример чтения outerHTML:
-        var div = document.getElementById('hello');
-        console.log(div.outerHTML); // <div>Привет <b>Мир</b></div>
-
-        // заменяем div.outerHTML на <p>...</p>
-        div.outerHTML = '<h2>Привет Новый Мир!</h2>';
-        // ... но содержимое div.outerHTML осталось тем же, несмотря на "перезапись"
-        console.log(div.outerHTML); // <div>Привет, Мир!</div>
-
-      </script>
-
-    </article>    
+        <h1>Hello World!</h1>
     
-    <article class="page" id="data">
-        <h2>Свойство data</h2>
-
-        <h2>Привет data!</h2>
-        Привет data!
-        <!-- start javascript -->
-        <script>
-          var page = document.getElementById('data');
-          console.log(page.childNodes.length);
-          for (var i = 0; i < page.childNodes.length; i++) {
-            console.log( page.childNodes[i].data );
-          }
-
-        </script>
-  
-    </article>
-    <article class="page" id="cont">
-        <h2>Свойство textContent</h2>
-
-        <h2 id="context">Привет textContent!</h2>
-        <!-- start javascript -->
-        <script>
-          var content = document.getElementById('context');
-
-          console.log(content.textContent);
-
-        </script>
-  
-    </article>
-    <article class="page" id="text">
-        <h2>Свойство innerText</h2>
-
-        <h2 id="intext" style="visibility: hidden">Привет innerText!</h2>
-        <!-- start javascript -->
-        <script>
-          var text = document.getElementById('intext');
-
-          console.log(text.innerText);
-
-        </script>
-  
-    </article>      
+        <article class="page">
+            <h2 id="id1">Hello JQuery!</h2>
+            <button class="continue">First Step</button>
+        </article>    
+        <article class="page">
+            <h2 id="id2">Селекторы</h2>
+            <!--Будет выбран этот элемент, т.к. он имеет класс btn-->
+            <button class="btn">Пересчитать</button>
+            <!--Этот элемент выбран не будет, т.к. он не имеет класс btn-->
+            <button class="button">Отправить заказ</button>
+            <!--Будет выбран этот элемент, т.к. он является элементом а и один из его классов равен btn -->
+            <a class="btn btn-default" href="http://itchief.ru">Перейти на сайт itchief.ru</a>
+            <!--Этот элемент выбран не будет, т.к. его класс не равен btn-->
+            <a class="main-link" href="http://getbootstrap.com">Перейти на сайт getbootstrap.com</a>
+            <!--Будет выбран этот элемент, т.к. он является элементом а и его класс равен btn-->
+            <a class="btn" href="http://modx.com">Перейти на сайт modx.com</a>
+        </article>    
     
-    <article class="page" id="hidd">
-        <h2>Свойство hidden</h2>
-        <div hidden>С атрибутом hidden</div>
-        <h2 id="hiddenDiv">Привет hidden!</h2>
+        <article class="page">
+            <h2 id="id3">Обработчики событий</h2>
 
-        <!-- start javascript -->
-        <script>
-          var hiddDiv = document.getElementById('hiddenDiv');
-          hiddDiv.hidden = true;
-          console.log(hiddDiv.innerHTML);
-        </script>
-  
-    </article> 
-
-    <article class="page" id="exprf">
-        <h2>Функции expression</h2>
+            <p></p>
         
-        <h2>Привет expression!</h2>
-
-        <!-- start javascript -->
-        <script>
-          var square = function(number) { 
-            return number * number; 
-          };
-          var x = square(4); // x получает значение 16
-          console.log(x);
-
-          // Имя функции может быть присвоено для вызова самой себя внутри самой функции
-
-          var factorial = function fac(n) { 
-            return n < 2 ? 1 : n * fac(n - 1); 
-          };
-          console.log(factorial(3));
-
-
-          function Truck(make, model, year) {
-            this.make = make;
-            this.model = model;
-            this.year = year;
-            this.engine = function() {
-              console.log("I turn the engine, but the engine doesn't turn");
-            }
-          }
-          
-        var beatUpTruck = new Truck("Eagle", "Talon TSi", 1993);
-        beatUpTruck.engine();
-        console.log('Because it is model: ', beatUpTruck.model, beatUpTruck.make);
-
-        </script>
-  
-    </article> 
-
-
-    <article class="page" id="calc">
-        <h2>Событие click</h2>
-        
-        <h2>Привет Calc!</h2>
-
-            <form>
-                <input type="text" id="res" value="">
-                <br>
-                <input type="button" value="0" id="b0">
-                <input type="button" value="1" id="b1">
-                <input type="button" value="2" id="b2">
-                <br>
-                <input type="button" value="3" id="b3">
-                <input type="button" value="4" id="b4">
-                <input type="button" value="5" id="b5">
-                <br>
-                <input type="button" value="6" id="b6">
-                <input type="button" value="7" id="b7">
-                <input type="button" value="8" id="b8">
-                <br>
-                <input type="button" value="9" id="b9">
-                <input type="button" value="+" id="plus">
-                <input type="button" value="=" id="equal">
-                </form>
-                <!-- start javascript -->
-                <script type="text/javascript">
-                    var a, b;
+            <button class="continue">First Step</button>
                     
-                    b2.onclick = function(){
-                     if (a===undefined){
-                        res.value = b2.value;
-                        a = parseInt(b2.value);
-                     }else{
-                        res.value += b2.value;
-                        b = parseInt(b2.value);
-                     }
-                    }
-                
-                    b3.onclick = function(){
-                     if (a===undefined){
-                        res.value = b3.value;
-                        a = parseInt(b3.value);
-                     }else{
-                        res.value += b3.value;
-                        b = parseInt(b3.value);
-                     }
-                    }
-                
-                    // b3.onclick = function(){
-                    //     res.value += b3.value;
-                    //     b = parseInt(b3.value);
-                    // }
-                
-                    plus.onclick = function(){
-                        res.value += plus.value;
-                
-                    }
-                    equal.onclick = function(){
-                        res.value = a+b;
-                        a = undefined;
-                        b = undefined;
-                    }
-                
-                </script>
-          
-        </section> <!-- end content-wrap -->
-  
-    </article> 
-
-    <article class="page" id="load">
-        <h2>Событие onload</h2>
-        <h2 id="load1"></h2>
-        <!-- start javascript -->
-        <script>
-          // Код события onload будет выполнен при полной загрузке страницы.
-
-          function messageShow() {
-            console.log('Документ и все ресурсы загружены!');
-            load1.innerHTML='Документ и все ресурсы загружены!';
-
-          }
-
-          window.onload = function() {
-            messageShow();
-          };
-
-        </script>
-  
-    </article>      
-
-    <article class="page" id="domload">
-        <h2>Событие DOMContentLoaded</h2>
-        <h2 id="domload1"></h2>
-        <!-- start javascript -->
-        <script>
-          // Код события onload будет выполнен при загрузке DOM.
-
-          function ready() {
-            console.log('Документ загружен!');
-            domload1.innerHTML='Документ загружен!';
-
-          }
-          document.addEventListener("DOMContentLoaded", ready);
-
-        </script>
-  
-    </article>  
-    
-    <article class="page" id="unload">
-        <h2>Событие onbeforeunload</h2>
+        </article> 
+        <article class="page">
+                <h2 id="id4">Функция text</h2>
+                <button class="continue">First Step</button>
+        </article>
+        <article class="page">
+                <h2 id="id5">Функция css</h2>
+                <span>Например, установим всем элементам span, у которых цвет шрифта не равен green, CSS свойство color, равное red.</span>
+        </article>  
+        <article class="page">
+                <h2 id="id6">Метод addClass</h2>
+                <p>Например, установим всем элементам span, у которых цвет шрифта не равен green, CSS свойство color, равное red.</p>
+        </article>  
+        <article class="page">
+                <h2 id="id7">Метод removeClass</h2>
+                <p>Например, установим всем элементам span, у которых цвет шрифта не равен green, CSS свойство color, равное red.</p>
+                <button class="continue">Toggle Step</button>
+        </article>  
         
-        <!-- start javascript -->
-        <script>
-          window.onbeforeunload = function() {
-
-            return "Точно перейти? И куда же ты собрался?";
-
-          };
-        </script>
-  
-    </article>   
-    <article class="page" id="litener">
-        <h2>Метод addEventListener</h2>
-        
-        <!-- start javascript -->
-        <script>
-          // Добавляет слушателя событий DOMContentLoaded
-          document.addEventListener("DOMContentLoaded", ready);
-
-          // function ready() {
-          //   hello.innerHTML = "Я готова!";
-          // }
-
-          function ready() {
-               console.log("Document is ready!");
-           }
-        </script>
-  
-    </article>   
-
-    <article class="page" id="docid">
-        <h2>Метод getElementById</h2>
-
-        <div id="content-holder">
-            <div id="content1">Если элементу назначен специальный атрибут id, то можно получить его по переменной с именем и значения id.</div>
-        </div>
-        
-        <!-- start javascript -->
-        <script>
-          // Добавляет слушателя событий DOMContentLoaded
-          document.addEventListener("DOMContentLoaded", ready);
-         
-          function ready() {
-            console.log("Document is ready!");
-            console.log(content1); // DOM-элемент
-            console.log(window['content-holder']); // в имени дефис, поэтому через
-           }
-        </script>
-  
-    </article>   
-
-    <article class="page" id="elstyle">
-      <h2>Свойство HTMLElement.style</h2>
-      
-      <div id="content2">За исключением Opera, стили не могут быть установлены через присвоение строки свойству style (только для чтения) так elt.style = "color: blue;". Это потому что атрибут style возвращает объект CSSStyleDeclaration.</div>
-      
-      <!-- start javascript -->
-      <script>
-        var elem = document.getElementById('content2');
-        elem.style.color = "blue";  // Напрямую
-
-        var elstyle1 = elem.style;
-        elstyle1.color = "red";  // Не напрямую
-      </script>
-
-    </article>   
-
-    <article class="page" id="cname">
-        <h2>Свойство className</h2>
-          
-        <div id="content3" class="booble example">Свойство className отвечает за значение атрибута class элемента.</div>
-        
-        <!-- start javascript -->
-        <script>
-          var elem3 = document.getElementById('content3');
-          console.log(elem3.className); //"booble example"
-          elem3.className = "class1 class2 class3";
-          console.log(elem3.className); //"class1 class2 class3"
-        </script>
-  
-    </article>   
-
-    <article class="page" id="clist">
-        <h2>Свойство classList</h2>
-          
-        <div id="content4" class="booble example">Свойство classList возвращает псевдомассив DOMTokenList, содержащий все классы элемента.
-            У classList есть примитивная альтернатива - свойство className, которое содержит значение атрибута class элемента.</div>
-        <!-- start javascript -->
-        <script>
-          var elem4 = document.getElementById('content4');
-          console.log(elem3.classList.length); 
-          
-          elem4.classList.add("class1", "class2", "class3");
-          console.log(elem4.classList); 
-
-          elem4.classList.remove("class1");
-          console.log(elem4.classList); 
-          
-          elem4.classList.item(1);
-
-          elem4.classList.toggle("class1");
-          elem4.classList.contains("class1");
-          
-          
-
-        </script>
-  
-    </article>   
-    
-    
-
-    
        
     </section> <!-- end content-wrap -->
     

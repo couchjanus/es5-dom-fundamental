@@ -1,5 +1,6 @@
 const path = require('path');
 const argv = require('yargs').argv;
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -87,6 +88,10 @@ const config = {
     }]
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',  
+      jQuery: 'jquery' 
+    }),
     new MiniCssExtractPlugin({
       filename: './css/[name].css',
       chunkFilename: '[id].css'

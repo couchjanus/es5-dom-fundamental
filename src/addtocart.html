@@ -6,7 +6,7 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello cart</title>
     <script defer src="/fontawesome/js/fontawesome-all.js"></script>
-    <link rel="stylesheet" href="/css/main.css">
+    
 
     <style>
          
@@ -298,77 +298,77 @@
     
     <script>
       
-        function toggle_panel(panel, background_layer) {
-                if (panel.classList.contains('show-sidebar')) {
-                    panel.classList.remove('show-sidebar');
-                    background_layer.classList.remove('is-visible');
-                } else {
-                    panel.classList.add('show-sidebar');
-                    background_layer.classList.add('is-visible');
-                }
-        }
+        // function toggle_panel(panel, background_layer) {
+        //         if (panel.classList.contains('show-sidebar')) {
+        //             panel.classList.remove('show-sidebar');
+        //             background_layer.classList.remove('is-visible');
+        //         } else {
+        //             panel.classList.add('show-sidebar');
+        //             background_layer.classList.add('is-visible');
+        //         }
+        // }
 
 
-        function ready() {
+        // function ready() {
             
-            document.getElementById("cart-trigger").addEventListener('click', function () {
-                toggle_panel(document.getElementById("cart-sidebar"), document.getElementById("shadow-layer"));
-            });
+        //     document.getElementById("cart-trigger").addEventListener('click', function () {
+        //         toggle_panel(document.getElementById("cart-sidebar"), document.getElementById("shadow-layer"));
+        //     });
 
-            document.querySelector("#cart-sidebar .remove").addEventListener('click', function () {
-                toggle_panel(document.getElementById("cart-sidebar"), document.getElementById("shadow-layer"));
-                }
-            );
+        //     document.querySelector("#cart-sidebar .remove").addEventListener('click', function () {
+        //         toggle_panel(document.getElementById("cart-sidebar"), document.getElementById("shadow-layer"));
+        //         }
+        //     );
 
-            var hamburgerToggle = document.querySelector('#menu-trigger');
+        //     var hamburgerToggle = document.querySelector('#menu-trigger');
     
-            hamburgerToggle.addEventListener('click', function(e){
-                e.preventDefault();
-                document.querySelector('.mainmenu').classList.toggle('active');
-            });
+        //     hamburgerToggle.addEventListener('click', function(e){
+        //         e.preventDefault();
+        //         document.querySelector('.mainmenu').classList.toggle('active');
+        //     });
 
-            // let mega = document.querySelector('.mega-menu');
+        //     // let mega = document.querySelector('.mega-menu');
 
-            // catalog.addEventListener('click', function () {
-            //     mega.classList.toggle('mega-active');
-            // });
+        //     // catalog.addEventListener('click', function () {
+        //     //     mega.classList.toggle('mega-active');
+        //     // });
             
-            document.querySelector('.mega-menu .close').addEventListener('click', function () {
-                mega.classList.remove('mega-active');
-            });
+        //     document.querySelector('.mega-menu .close').addEventListener('click', function () {
+        //         mega.classList.remove('mega-active');
+        //     });
 
 
-            let buy = document.querySelector('.buy-now');
+        //     let buy = document.querySelector('.buy-now');
 
-            buy.addEventListener('click', function () {
-            document.querySelector('.product .product-name').style.display = 'none';
-            document.querySelector('.product .icon').style.display = 'none';
-            document.querySelector('.product .buy-now').style.display = 'none';
-            document.querySelector('.product .product-detail').style.display = 'block';
-            document.querySelector('.product-menu').style.top = '40%';
-            });
+        //     buy.addEventListener('click', function () {
+        //     document.querySelector('.product .product-name').style.display = 'none';
+        //     document.querySelector('.product .icon').style.display = 'none';
+        //     document.querySelector('.product .buy-now').style.display = 'none';
+        //     document.querySelector('.product .product-detail').style.display = 'block';
+        //     document.querySelector('.product-menu').style.top = '40%';
+        //     });
 
-            let cancel = document.querySelector('.cancel');
-            cancel.addEventListener('click', function () {
-            document.querySelector('.product .product-name').style.display = 'block';
-            document.querySelector('.product .icon').style.display = 'block';
-            document.querySelector('.product .buy-now').style.display = 'block';
-            document.querySelector('.product .product-detail').style.display = 'none';
-            document.querySelector('.product-menu').style.top = '80%';
-            });
+        //     let cancel = document.querySelector('.cancel');
+        //     cancel.addEventListener('click', function () {
+        //     document.querySelector('.product .product-name').style.display = 'block';
+        //     document.querySelector('.product .icon').style.display = 'block';
+        //     document.querySelector('.product .buy-now').style.display = 'block';
+        //     document.querySelector('.product .product-detail').style.display = 'none';
+        //     document.querySelector('.product-menu').style.top = '80%';
+        //     });
 
-            let addcart = document.querySelector('.add-to-cart');
+        //     let addcart = document.querySelector('.add-to-cart');
       
-            addcart.addEventListener('click', function () {
-                var y = 180;
-                document.querySelector('.product-wrapper').style.transform = 'rotateY(' + y + 'deg)';
-                document.querySelector('.product-back').classList.add('back-is-visible');
+        //     addcart.addEventListener('click', function () {
+        //         var y = 180;
+        //         document.querySelector('.product-wrapper').style.transform = 'rotateY(' + y + 'deg)';
+        //         document.querySelector('.product-back').classList.add('back-is-visible');
                 
-            });      
+        //     });      
 
-        }
+        // }
 
-        document.addEventListener("DOMContentLoaded", ready);
+        // document.addEventListener("DOMContentLoaded", ready);
 
       </script>
   </body>
