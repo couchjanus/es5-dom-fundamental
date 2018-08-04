@@ -12,6 +12,14 @@
             background-color: black;
             border: crimson solid 2px;
         }
+        .show1{
+            display: none;
+            background-color: aquamarine;
+        }
+        .hide1 {
+            display: block;
+            background-color: aquamarine;
+        }
 
         </style>
     </head>
@@ -39,148 +47,86 @@
     
 
         <article class="page">
-            <h2 id="id1">Объект Node</h2>
+            <h2 id="id1">show()</h2>
             <div id="nod1">
-                <div>Текст</div>
-                <!--Комментарий-->
+                Мгновенно показывает выбранные элементы, установив их css-свойство display в none, не изменяя при этом их прозрачность и размеры.
             </div>
-
-            <div id="res1"></div>
-
-            <script>
-                var elC = document.getElementById('nod1').childNodes;
-                
-                console.log(elC);
-                res1.innerHTML = "<h2>Length= "+elC.length+"</h2>";
-            </script>
-
-            
+            <button id="show1">show</button>
+            <div class="show1">Библиотека jQuery предоставляет несколько техник для добавления анимации к DOM-элементам на странице. Ниже описаны простые, стандартные методы анимации, которые часто используются, а также методы способные обрабатывать сложные пользовательские эффекты.</div>
+  
         </article>    
         <article class="page">
-            <h2 id="id2">Свойство parentNode</h2>
-
-            <p>Свойство parentNode - покажет нам родительский узел элемента, к которому мы обращаемся  или null для узлов, не имеющих родителя, таких как Document.Посмотрим с помощью свойства parentNode, какой у 'nav' родитель.</p>
-            <script>
-            var elN = document.getElementById('nav').parentNode;
-            console.log(elN);
-            </script>
-               
+            <h2 id="id2">hide()</h2>
+            <p>Мгновенно скрывает выбранные элементы, установив их css-свойство display в none, не изменяя при этом их прозрачность и размеры.</p>
+            <button id="hide1">hide</button>
+            <div class="hide1">Библиотека jQuery предоставляет несколько техник для добавления анимации к DOM-элементам на странице. Ниже описаны простые, стандартные методы анимации, которые часто используются, а также методы способные обрабатывать сложные пользовательские эффекты.</div>
         </article>    
     
         <article class="page">
-            <h2 id="id3">дочерний узел</h2>
+            <h2 id="id3">fadeIn</h2>
 
-            <p>Первый и последний дочерние узлы или null, если данный узел не имеет дочерних узлов. </p>
-            <ol><li>firstChild - первый дочерний узел элемента,</li><li>lastChild - последний дочерний узел.</li>
-            </ol>
-            <div id="res2"></div>
-            <script>
-                var elF = document.querySelector('ol').firstChild;
-                console.log(elF);
-                var elL = document.getElementById('nav').lastChild;
-                console.log(elL);
-            </script>
+            <p>
+                .fadeIn() -  показывает элементы на странице за счет плавного изменения прозрачности.
+            </p>
+
+            <button id="fi1">fadeIn</button>
+            <div class="show1">Библиотека jQuery предоставляет несколько техник для добавления анимации к DOM-элементам на странице. Ниже описаны простые, стандартные методы анимации, которые часто используются, а также методы способные обрабатывать сложные пользовательские эффекты.</div>
+            
                     
         </article> 
         <article class="page">
-                <h2 id="id4">братские узлы</h2>
-                <p>Следующий и предыдущий братские узлы. Братскими называются два узла, имеющие одного и того же родителя. Порядок их следования соответствует порядку следования в документе. Эти свойства связывают узлы в двусвязный список.</p>
-                <ol>
-                    <li>nextSibling - узел после элемента,</li>
-                    <li>previousSibling - узел до элемента.</li>
-                </ol>
-                <script>
-                    var elNS = document.getElementById('nav').nextSibling;
-                    console.log(elNS);
-                    elPS = document.getElementById('nav').previousSibling;
-                    console.log(elPS);
-
-                </script>
+                <h2 id="id4">fadeOut</h2>
+                <p>.fadeOut() -  Скрывает элементы на странице за счет плавного изменения прозрачности.</p>
+                <button id="fi2">fadeOut</button>
+                <div class="hide1">Библиотека jQuery предоставляет несколько техник для добавления анимации к DOM-элементам на странице. Ниже описаны простые, стандартные методы анимации, которые часто используются, а также методы способные обрабатывать сложные пользовательские эффекты.</div>
 
         </article>
         <article class="page">
-                <h2 id="id5">Свойство nodeName</h2>
-                <span>Данное свойство показывает нам имя тега выбранного элемента. 
-
+                <h2 id="id5">fadeTo</h2>
+                <span>.fadeTo() -  Плавно изменяет прозрачность элементов.
                 </span>
-                <script>
-                // проверим какое имя тега у данного элемента.
-                        
-                var elV = document.getElementById('id5').nodeName;
-                console.log(elV);
-            
-                </script>
+
+                <button id="fto">fadeOut</button>
+                <div class="hide1">Библиотека jQuery предоставляет несколько техник для добавления анимации к DOM-элементам на странице. Ниже описаны простые, стандартные методы анимации, которые часто используются, а также методы способные обрабатывать сложные пользовательские эффекты.</div>
+
         </article>  
 
         <article class="page">
-                <h2 id="id6">Свойство nodeValue</h2>
-                <p>Обратится к текстовому узлу внутри элемента можно с помощью свойства firstChild, которое вернет первый дочерний узел данного элемента - текстовый узел.
-
+                <h2 id="id6">fadeToggle</h2>
+                <p>
+                    .fadeToggle() - Поочередно скрывает/показывает элементы на странице, как это делают .fadeIn() и .fadeOut().
                 </p>
-                <script>
-                        var elT = document.getElementById('id6').firstChild.nodeValue;
-                        console.log(elT);
-                                
-                </script>
+                <button id="ftog">fadeOut</button>
+                <div class="hide1">Библиотека jQuery предоставляет несколько техник для добавления анимации к DOM-элементам на странице. Ниже описаны простые, стандартные методы анимации, которые часто используются, а также методы способные обрабатывать сложные пользовательские эффекты.</div>
         </article>  
         <article class="page">
-                <h2 id="id7">Свойство nodeType</h2>
-                <p>Данное свойство может нам предоставить тип узла элемента, он вернет число, которое соответствует определенным узлам объекта Node.
+                <h2 id="id7">slideUp</h2>
+                <p>.slideUp()сворачивает элементы на странице (за счет плавного изменения высоты элементов).
                 </p>
-                <ol id="vh">
-                    <li>Число 1 - это узел элемента, например тег LI или UL,</li>
-                    <li>число 3 - это текстовый узел,</li>
-                    <li>число 8 - это комментарий.</li>
-                </ol>
-                <script>
-                           var el = document.getElementById('vh').firstChild.nodeType;
-                           console.log(el);
-                        
-                           var el = document.getElementById('vh').nodeType;
-                           console.log(el);
-                </script>                        
-                        
-                
-                
+                <button id="su">slideUp</button>
+                <div class="hide1">
+                <img src="/images/cat3.jpg">
+                </div>
         </article>  
         <article class="page">
-                <h2 id="id8">Свойство childElementCount</h2>
-                <p>Свойство Node.childElementCount предназначено только для чтения и возвращает число дочерних элементов узла.
-     
+                <h2 id="id8">slideDown</h2>
+                <p>.slideDown() - Разворачивает элементы на странице (за счет плавного изменения высоты элементов).
                 </p>
-                
-                <script>
-                    var elC = document.getElementById("nav");
-                    if (el.childElementCount > 0) {
-                          console.log(elC.childElementCount);
-                    }
-                </script>                        
-                        
-                
-                
+                <button id="sd">slideDown</button>
+                <div class="show1">
+                <img src="/images/cat3.jpg">
+                </div>
         </article>  
         <article class="page">
-                <h2 id="id9">Свойство Node.children</h2>
-                <p>Свойство Node.children возвращает коллекцию (HTMLCollection) дочерних элементов узла.
-                </p>
-                <ul id="ul">
-                        <li>1 пункт</li>
-                        <li>2 пункт</li>
-                     </ul>
-                     
-                <script>
-                var elementChildrens = document.querySelector("#ul").children;
-                for (var i=0, child; child=elementChildrens[i]; i++) {
-                    // elementChildrens - коллеция детей списка
-                    // child - последовательно, каждый из элементов elementChildrens
-                    console.log(child.innerHTML);
-                }
-
+                <h2 id="id9">slideToggle</h2>
+                <p>
+                    .slideToggle() -  Поочередно разворачивает/сворачивает элементы на странице, как это делают .slideUp() и .slideDown().
                     
-                </script>                        
-                        
-                
-                
+                </p>
+                <button id="st">slideDown</button>
+                <div class="show1">
+                 <img src="/images/cat3.jpg">
+                </div>
         </article>  
 
         

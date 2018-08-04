@@ -120,8 +120,8 @@ const config = {
       filename: './test.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/sidebar.html',
-      filename: './sidebar.html'
+      template: './src/product-item.html',
+      filename: './product-item.html'
     }),
     new HtmlWebpackPlugin({
       template: './src/shadow.html',
@@ -135,10 +135,7 @@ const config = {
       template: './src/buynow.html',
       filename: './buynow.html'
     }),
-    new HtmlWebpackPlugin({
-      template: './src/cancel.html',
-      filename: './cancel.html'
-    }),
+    
     new HtmlWebpackPlugin({
       template: './src/addtocart.html',
       filename: './addtocart.html'

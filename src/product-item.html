@@ -35,6 +35,54 @@
     <h1>Hello, Cart!</h1>        
         
     <div class="grid-layout">
+        <article class="grid-item">
+          <div class="product-wrapper">    
+            <div class="product">
+                <p class="product-name">Very&nbsp;Prety&nbsp;Cat</p>
+                <div class="icon">
+                    <div class="icon-background"></div>
+                    <span class="shopping-cart">
+                    <i class="fas fa-shopping-cart fa-2x"></i>
+                    </span>
+                </div>
+                <div class="product-picture">
+                    <img src="images/cat3.jpg" alt="Nice Cat" />
+                </div>
+                <div class="product-menu">
+                    <div class="product-price">
+                    $9.99
+                    </div>
+                    <div class="buy-now">
+                    Buy now!
+                    </div>
+                    <div class="product-detail">
+                    Detail
+                    </div>
+            
+                    <div class="how-many">
+                    <div class="quantity-input">
+                        <input class="minus btn" type="button" value="-">
+                        <input class="input-text quantity text" value="3" size="4">
+                        <input class="plus btn" type="button" value="+">
+                    </div>
+                    </div>
+                    <div class="cancel">
+                    Cancel
+                    </div>
+                    <div class="add-to-cart">
+                    Add to Cart!
+                    </div>
+                </div>
+            </div>
+            <div class="product-back">
+                <span class="check">
+                    <i class="fas fa-check fa-4x"></i>
+                    <p>Success!</p>
+                </span>
+                
+            </div>
+          </div>  
+        </article>            
     </div>            
     </section>
     <!-- Footer Area Start -->
@@ -49,7 +97,6 @@
         <h2>Cart</h2>
         <!-- cart-items start-->
         <ul class="cart-items">
-           
         </ul> 
         <!-- cart-items end -->
     
@@ -98,20 +145,20 @@
     </div>
 
     <template id="cartItem">
-      <li>
-        <span class="productInCart"></span>
-          <span class="qty">
-            <span class="item-quantities">
-            </span>
-          </span>
-          <span class="item-name">
-          </span>
-          <span class="item-prices">
-          </span>
-          <a class="item-remove" href="#0"><i class="fas fa-times"></i></a>
-      </li>
+            <li>
+              <span class="productInCart"></span>
+                <span class="qty">
+                  <span class="item-quantities">
+                  </span>
+                  <span class="item-name">
+                  </span>
+                </span>
+                <div class="item-prices">
+                </div>
+                <a class="item-remove" href="#0"></a>
+            </li>
     </template>
-    
+
     <template id="productItem">
       <article class="grid-item">
         <div class="product-wrapper">    
@@ -123,11 +170,11 @@
                   <i class="fas fa-shopping-cart fa-2x"></i>
                 </span>
             </div>
-            <div class="product_picture">
-                <img src="" alt="Nice Cat" class="product-picture" />
+            <div class="product-picture">
+                <img src="" alt="Nice Cat" />
             </div>
             <span class="product-description"></span>
-            <div class="product-menu product-id"  productId=''>
+            <div class="product-menu"  productId='1'>
               <div class="product-price">
                 9.99
               </div>
