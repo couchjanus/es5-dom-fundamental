@@ -158,9 +158,15 @@ const config = {
   } : {},
   devServer: {
     contentBase: distPath,
-    port: 3000,
+    port: 8000,
     compress: true,
-    open: true
+    open: true,
+    proxy: {
+      '/': {
+          target: 'http://localhost:3000',
+          secure: false
+      }
+    }
   }
 };
 

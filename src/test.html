@@ -6,16 +6,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <style>
-         .console{
-            color: aquamarine;
-            background-color: black;
-            border: crimson solid 2px;
-            width: 80%;
-            height: auto;
-            margin: 1.5rem auto;
-            padding: 1rem;
-        }
+         
         </style>
     </head>
     <body>
@@ -38,107 +31,193 @@
 
     <section class="wrapper container special">
     
-        <h1>Hello World!</h1>
-        <article class="page">
-            <h2 id="id1">localStorage</h2>
-            <div id="nod1">
-                localStorage -  это объект класса Storage, доступный как  свойство глобального объекта браузера (window).
-            </div>
-            <button id="showLS">show localStorage</button>
-            <div class="console"></div>
+        
+        <article class="page" id="id1">
+            <div class="card text-center">
+                <div class="card-header">
+                  Hello, AJAX!
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Консоль выполнения запроса:</h4>
+                  <p class="card-text">Обрабатываем ответ сервера.</p>
+                  <a class="btn btn-primary" id="btn01">Запустить скрипт</a>
+                </div>
+                <div class="card-footer text-muted console01">
+                  ответ сервера
+                </div>
+              </div>
+          
         </article>
 
-        <article class="page">
-            <h2 id="id2">try..catch</h2>
-            <p>Конструкция try..catch состоит из двух основных блоков: try, и затем catch:</p>
-            <ul>
-                <li>Выполняется код внутри блока try.</li>
-                <li>Если в нём ошибок нет, то блок catch(err) игнорируется, то есть выполнение доходит до конца try и потом прыгает через catch.</li>
-                <li>Если в нём возникнет ошибка, то выполнение try на ней прерывается, и управление прыгает в начало блока catch(err).</li>
-                <li>При этом переменная err будет содержать объект ошибки с подробной информацией о произошедшем.</li>
-            </ul>    
-            <button id="tryThis">try This</button>
-            <div class="console"></div>
-        </article>    
+        <article class="page" id="id2">
+            <div class="card text-center">
+                <div class="card-header">
+                  Hello, readyState!
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Консоль выполнения запроса:</h4>
+                  <p class="card-text console02">Обрабатываем ответ сервера.</p>
+                  <a class="btn btn-primary btn02">Запустить скрипт</a>
+                </div>
+                <div class="card-footer text-muted result02">
+                  ответ сервера
+                </div>
+              </div>
+        </article>   
     
-        <article class="page">
-            <h2 id="id3">catch</h2>
+        <article class="page" id="id3">
+            <div class="card text-center">
+                <div class="card-header">
+                  Hello, $.ajax!
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Консоль выполнения запроса:</h4>
+                  <p class="card-text console03">Обрабатываем ответ сервера.</p>
+                  <a class="btn btn-primary btn03">Запустить скрипт</a>
+                </div>
+                <div class="card-footer text-muted result03">
+                  ответ сервера
+                </div>
+              </div>
+        </article>   
+ 
+        <article class="page" id="id4">
+            <div class="card text-center">
+                <div class="card-header">
+                  Hello, success!
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Консоль выполнения запроса:</h4>
+                  <p class="card-text console04">Обрабатываем ответ сервера.</p>
+                  <a class="btn btn-primary btn04">Запустить скрипт</a>
+                </div>
+                <div class="card-footer text-muted result04">
+                  ответ сервера
+                </div>
+              </div>
+        </article>   
+        <article class="page" id="id5">
+            <div class="card text-center">
+                <div class="card-header">
+                  Hello, beforeSend!
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Консоль выполнения запроса:</h4>
+                  <p class="card-text console05">Обрабатываем ответ сервера.</p>
+                  <a class="btn btn-primary btn05">Запустить скрипт</a>
+                </div>
+                <div class="card-footer text-muted result05">
+                  ответ сервера
+                </div>
+              </div>
+        </article>   
 
-            <p>
-                .fadeIn() -  показывает элементы на странице за счет плавного изменения прозрачности.
-            </p>
+        <article class="page" id="id6">
+            <div class="card text-center">
+                <div class="card-header">
+                  Hello, error!
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Консоль выполнения запроса:</h4>
+                  <p class="card-text console06">Обрабатываем ответ сервера.</p>
+                  <a class="btn btn-primary btn06">Запустить скрипт</a>
+                </div>
+                <div class="card-footer text-muted result06">
+                  ответ сервера
+                </div>
+              </div>
+        </article>   
+        <article class="page" id="id7">
+            <div class="card text-center">
+                <div class="card-header">
+                  Hello, complete!
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Консоль выполнения запроса:</h4>
+                  <p class="card-text console07">Обрабатываем ответ сервера.</p>
+                  <a class="btn btn-primary btn07">Запустить скрипт</a>
+                </div>
+                <div class="card-footer text-muted result07">
+                  ответ сервера
+                </div>
+              </div>
+        </article>  
+        <article class="page" id="id8">
+            <div class="card text-center">
+                <div class="card-header">
+                  Hello, dataFilter!
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Консоль выполнения запроса:</h4>
+                  <p class="card-text console08">Обрабатываем ответ сервера.</p>
+                  <a class="btn btn-primary btn08">Запустить скрипт</a>
+                </div>
+                <div class="card-footer text-muted result08">
+                  ответ сервера
+                </div>
+              </div>
+        </article>  
+        <article class="page" id="id9">
+            <div class="card text-center">
+                <div class="card-header">
+                  Hello, promise!
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Консоль выполнения запроса:</h4>
+                  <p class="card-text console09">Обрабатываем ответ сервера.</p>
+                  <a class="btn btn-primary btn09">Запустить скрипт</a>
+                </div>
+                <div class="card-footer text-muted result09">
+                  ответ сервера
+                </div>
+              </div>
+        </article>  
 
-            <button id="catchThis">Catch This</button>
-            <div class="console"></div>
-            
-                    
+        <article class="page" id="id10">
+            <div class="card text-center">
+                <div class="card-header">
+                  Hello, fetch запрос!
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Консоль выполнения запроса:</h4>
+                  <p class="card-text console10">Обрабатываем ответ сервера.</p>
+                  <a class="btn btn-primary btn10">Запустить скрипт</a>
+                </div>
+                <div class="card-footer text-muted result10">
+                  ответ сервера
+                </div>
+              </div>
+        </article>  
+        <article class="page" id="id11">
+            <div class="card text-center">
+                <div class="card-header">
+                  Hello, Stream-обьект!
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Консоль выполнения запроса:</h4>
+                  <p class="card-text console11">Обрабатываем ответ сервера.</p>
+                  <a class="btn btn-primary btn11">Запустить скрипт</a>
+                </div>
+                <div class="card-footer text-muted result11">
+                  ответ сервера
+                </div>
+              </div>
+        </article>    
+        <article class="page" id="id12">
+            <div class="card text-center">
+                <div class="card-header">
+                  Hello, Stream-обьект!
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Консоль выполнения запроса:</h4>
+                  <p class="card-text console12">Обрабатываем ответ сервера.</p>
+                  <a class="btn btn-primary btn12">Запустить скрипт</a>
+                </div>
+                <div class="card-footer text-muted result12">
+                  ответ сервера
+                </div>
+              </div>
         </article> 
-        <article class="page">
-            <h2 id="id4">Секция finally</h2>
-            <p>Секцию finally используют, чтобы завершить начатые операции при любом варианте развития событий.</p>
-                
-            <button id="finallyThis">Finally This</button>
-            <div class="console"></div>
-
-        </article>
-        <article class="page">
-                <h2 id="id5">QUOTA_EXCEEDED_ERR</h2>
-                <span>Браузеры выделяют 5мб под localStorage. И если вы его превысите — получите исключение QUOTA_EXCEEDED_ERR.  С его помощью можно проверять есть ли в вашем хранилище еще место.
-                </span>
-
-                <button id="quotaLS">QUOTA</button>
-                <div class="console"></div>
-
-        </article>  
-
-        <article class="page">
-                <h2 id="id6">Метод setItem</h2>
-                <p>
-                    Метод setItem(key,value) предназначен для добавления в хранилище элемента с указанным ключом (key) и значением (value). 
-                    Если в хранилище уже есть элемент с указанным ключом (key), то в этом случае произойдет изменения его значения (value).
-                    
-                </p>
-                <button id="setItem">setItem</button>
-                <div class="console"></div>
-        </article>  
-        <article class="page">
-                <h2 id="id7">Метод getItem</h2>
-                <p>.slideUp()сворачивает элементы на странице (за счет плавного изменения высоты элементов).
-                </p>
-                <button id="getItem">getItem</button>
-                <div class="console"></div>
-        </article>  
-        <article class="page">
-                <h2 id="id8">saveCart</h2>
-                
-                <button id="saveCart">saveCart</button>
-                <div class="console"></div>
-        </article>  
-        <article class="page">
-                <h2 id="id9">Save Cart Into LS</h2>
-                
-                <button id="saveCartInto">Save Cart</button>
-                <div class="console"></div>
-        </article>  
-
-        <article class="page">
-            <h2 id="id10">Get Cart Data</h2>
-            
-            <button id="getCartData">Get Cart Data</button>
-            <div class="console"></div>
-        </article>  
-        <article class="page">
-            <h2 id="id11">Error Cart Data</h2>
-            
-            <button id="errorCartData">Error Cart Data</button>
-            <div class="console"></div>
-        </article>  
-        <article class="page">
-            <h2 id="id12">Show Cart Data</h2>
-            
-            <button id="showCart">Show Cart Data</button>
-            <div class="console"></div>
-        </article>  
         
         
        
